@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!-- saved from url=(0082)file:///home/harsh/Dropbox/rokad%20installer/Rokad/Saved%20Files/master/rokad.html -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+		 
+		<title>Rokad</title> 
+		<script type="application/javascript;version=1.7"></script>
+		<link rel="stylesheet" type="text/css" href="./Rokad_files/style.css">
+		<script type="text/javascript" src="./Rokad_files/jquery-1.8.3.min.js">
+		</script> 
+		<script type="text/javascript" src="./Rokad_files/script.js">
+		</script>
+		<script type="text/javascript" src="./Rokad_files/saveFormValues.js">
+		</script>
+		<script type="text/javascript" src="./Rokad_files/jquery-ui-1.8.17.custom.min.js"></script>
+		<script type="text/javascript" src="./Rokad_files/jspdf.debug.js"></script>
+		<script type="text/javascript" src="./Rokad_files/basic.js"></script>
+		<script type="text/javascript" src="./Rokad_files/Cookies.js"></script>
+		</head><body><button type="button" onclick="lock_document()">Lock</button>  		
+		<button type="button" onclick="unlock_document()">Unlock</button>
+		<button type="button" onclick="print_report()">Print Report</button>
+		<a href="file:///home/harsh/Dropbox/rokad%20installer/Rokad/Saved%20Files/master/master.xls">Download Partners List</a>
+	
+	 
+		<form method="get" onsubmit="return false;" action="file:///home/harsh/Dropbox/rokad%20installer/Rokad/Saved%20Files/master/saveForm.html">
+			<datalist id="left">
+			<option value="Party 1"></option>
+<option value="Party 2"></option>
+<option value="Party 3"></option>
+<option value="Party 4"></option>
+<option value="Party 5"></option>
+<option value="Party 6"></option>
+<option value="Party 7"></option>
+<option value="Party 8"></option>
+<option value="Party 9"></option>
+<option value="Party 10"></option>
+<option value="Party 11"></option>
+<option value="Party 12"></option>
+<option value="Party 13"></option></datalist>
+			<datalist id="right">
+			<option value="Party 14"></option>
+<option value="Party 15"></option>
+<option value="Party 16"></option>
+<option value="Party 17"></option>
+<option value="Party 18"></option>
+<option value="Party 19"></option>
+<option value="Party 20"></option>
+<option value="Party 21"></option>
+<option value="Party 22"></option>
+<option value="Party 23"></option>
+<option value="Party 24"></option>
+<option value="Party 25"></option>
+<option value="Party 26"></option>
+<option value="Party 27"></option></datalist>
+			<div style="color:black; width: 100%; height:50px;"> 
+				<table id="shivam" style="width:100%;height:45px;background-color:rgb(100,200,200);" border="1" align="center">
+					<tbody>
+						<tr>
+							<td size="100" style="text-align:center;height:35px;">
+						<div type="text" style="text-align:center;height:20px;width:500px" id="main-heading" class="input-enter convert"></div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div>
+				<table class="total" style="margin:0px;width:100%; background-color:rgb(100,200,200);">
+					<tbody>
+						<tr>
+							<td size="100" style="text-align:center;">
+								<div type="number" style="text-align:center;" id="sum-left" class=" convert">100</div>
+							</td>
+							<td size="100" style="text-align:center;">
+								<div type="number" style="text-align:center;" id="sum-right" class=" convert">200</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div style="display:inline-block; width:100%; background: rgba(51,51,1000,0.1);height:520px;overflow:auto;">
+				<div id="div1" style=" width:49.5%;float:left;position:relative;">
+					<div class="divfamily d1 family1" style="width:100%;">
+						<a class="exit family1" onclick="delete_function(this)">
+						X
+						</a>
+						<div class="divparent d1 family1" onkeydown="parent_function(this)">
+							<div type="number" onchange="family_total_onchange(this)" class="parent d1 family1 total convert">100</div>
+							<div list="left" style="width:250px" class="parent d1 family1 desc convert">Party 2</div>
+						</div>
+					</div>
+				</div>
+				<div id="div2" style=" width:49.5%;float:right;position:relative;&#39;">
+					<div class="divfamily d2 family2" style="width:100%;">
+						<a class="exit family2" onclick="delete_function(this)">
+						X
+						</a>
+						<div class="divparent d2 family2" onkeydown="parent_function(this)">
+							<div type="number" onchange="family_total_onchange(this)" class="parent d2 family2 total convert">200</div>
+							<div list="right" style="width:250px" class="parent d2 family2 desc convert">Party 15</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	 
+
+
+</body></html>

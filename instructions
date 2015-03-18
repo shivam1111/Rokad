@@ -1,0 +1,7 @@
+1> extract the folder in anywhere.
+2> if system is 32 bit run :"  http://www.python.org/ftp/python/3.3.5/python-3.3.5.msi         " in chrome
+3> if system is 64 bit run :"  http://www.python.org/ftp/python/3.3.5/python-3.3.5.amd64.msi   " in chrome
+4> install after downloading 2 or 3
+5> then extract the Rokad folder from the rokad installer zip file and place it in c:\python33\
+6> check if python or py works in cmd else set path
+7> then install all the folders in install folder ( using py setup.py install), first simplejson,then setuptools ,then xlrd, then selenium

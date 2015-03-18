@@ -1,0 +1,9 @@
+Maximum value of an integer field is 10000000
+Maximun charater size is 20 characters in the main family description and 10 in the subfamily description
+
+Note -: These restrictions are just because of Reporting 
+
+Enable experimental javascript features in google chrome
+Paste the following in the url
+chrome://flags/
+

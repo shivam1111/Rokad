@@ -1,0 +1,6 @@
+Tab - to the next element
+Shift Tab - to the previous element
+F1
+F2
+F3
+CTRL

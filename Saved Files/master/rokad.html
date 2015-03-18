@@ -1,0 +1,81 @@
+<!DOCTYPE html> 
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"> 
+	<head> 
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+		<title>Rokad</title> 
+		<script type="application/javascript;version=1.7"></script>
+		<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+		<script type="text/javascript" src="../../js/jquery-1.8.3.min.js">
+		</script> 
+		<script type="text/javascript" src="../../js/script.js">
+		</script>
+		<script type="text/javascript" src="../../js/saveFormValues.js">
+		</script>
+		<script type="text/javascript" src="../../js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+		<script type="text/javascript" src="../../jsPDF-master/dist/jspdf.debug.js"></script>
+		<script type="text/javascript" src="../../js/basic.js"></script>
+		<script type="text/javascript" src="../../js/Cookies.js"></script>
+		<button type="button" onclick="lock_document()">Lock</button>  		
+		<button type="button" onclick="unlock_document()">Unlock</button>
+		<button type="button" onclick="print_report()">Print Report</button>
+		<a href="master.xls">Download Partners List</a>
+	</head>
+	<body> 
+		<form method="get" onsubmit="return false;" action="saveForm.html" >
+			<datalist id="left">
+			</datalist>
+			<datalist id="right">
+			</datalist>
+			<div style="color:black; width: 100%; height:50px;"> 
+				<table id="shivam" style="width:100%;height:45px;background-color:rgb(100,200,200);" border="1" align="center">
+					<tbody>
+						<tr>
+							<td  size = "100"  style="text-align:center;height:35px;">
+						<input placeholder = "Title" type = "text" id = "main-heading" class="input-enter" style="text-align:center;height:20px;width:500px"/>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div>
+				<table class="total" style="margin:0px;width:100%; background-color:rgb(100,200,200);">
+					<tbody>
+						<tr>
+							<td  size = "100"  style="text-align:center;">
+								<input placeholder = "Total" readonly type = "number" id = "sum-left"  style="text-align:center;"/>
+							</td>
+							<td  size = "100"  style="text-align:center;">
+								<input placeholder = "Total" readonly type = "number" id = "sum-right" style="text-align:center;"/>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div style="display:inline-block; width:100%; background: rgba(51,51,1000,0.1);height:520px;overflow:auto;">
+				<div   id="div1" style=" width:49.5%;float:left;position:relative;">
+					<div   class = "divfamily d1 family1" style ="width:100%;">
+						<a class="exit family1" onclick="delete_function(this)">
+						X
+						</a>
+						<div class ="divparent d1 family1" onkeydown = "parent_function(this)">
+							<input onchange="family_total_onchange(this)" class ="parent d1 family1 total"  max = "10000000" type="number" step="any"/>
+							<input class ="parent d1 family1 desc" list="left" placeholder="Description" style="width:250px"/>
+						</div>
+					</div>
+				</div>
+				<div  id="div2" style=" width:49.5%;float:right;position:relative;'">
+					<div  class = "divfamily d2 family2" style ="width:100%;">
+						<a class="exit family2" onclick="delete_function(this)">
+						X
+						</a>
+						<div class ="divparent d2 family2" onkeydown = "parent_function(this)">
+							<input onchange="family_total_onchange(this)" class ="parent d2 family2 total" type="number" step="any"/>
+							<input class ="parent d2 family2 desc" list="right" placeholder="Description" style="width:250px"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</body> 
+</html>
+

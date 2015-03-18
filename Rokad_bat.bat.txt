@@ -1,0 +1,31 @@
+setlocal
+set port=7999
+
+
+:pick_a_new_port 
+set /a port+=1
+netstat -an | findstr /RC:":%port% .*LISTENING" 1>nul 2>nul && (ECHO Port is in use & set new=new & goto pick_a_new_port)
+echo %port% ok
+start  python -m http.server %port% 
+timeout 3
+start  /wait  chrome.exe  "localhost:%port%" 
+FOR /F %%T IN ('Wmic process where^(Name^="chrome.exe"^)get ProcessId^|more +1') DO (
+SET /A ProcessId=%%T) &GOTO SkipLine                                                   
+:SkipLine                                                                              
+echo ProcessId = %ProcessId% 
+
+:WHILE
+tasklist /fi "pid eq %ProcessId%" | find   "chrome.exe" 1>nul
+
+echo Error level = %ERRORLEVEL%
+if  %ERRORLEVEL% == 0 goto :RUNNING
+if  %ERRORLEVEL% == 1 goto :NOTRUNNING
+
+:RUNNING
+ping 9.9.9.9
+goto :WHILE
+
+:NOTRUNNING
+FOR /F "tokens=5 delims= " %P IN ('netstat -a -n -o ^| findstr %port%') DO taskkill /PID %P  /F
+pause
+exit /B
